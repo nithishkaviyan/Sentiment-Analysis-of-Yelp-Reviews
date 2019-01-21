@@ -1,6 +1,6 @@
 # Sentiment-Analysis-of-Yelp-Reviews
 
-This repository contains the code for sentiment analysis performed for Yelp Reviews using <b>Bag-of-Words model</b> with Neural Network and <b>Naive Bayes Classifier</b>. Soon, I will update with a Recurrent Neural Network Model for the same sentiment classification of texts.
+This repository contains the code for sentiment analysis performed for Yelp Reviews using <b>Bag-of-Words model</b> with Neural Network and <b>Naive Bayes Classifier</b>. Soon, I will update a Recurrent Neural Network Model for the same sentiment classification of texts.
 
 I have also attached few scripts and notebooks used for preprocessing steps.
 
