@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 import numpy as np
@@ -12,8 +8,6 @@ import torch.optim as optim
 from torch.autograd import Variable
 import torch.distributed as dist
 
-
-# In[3]:
 
 
 class BOW_model(nn.Module):
@@ -42,14 +36,6 @@ class BOW_model(nn.Module):
         return self.loss(x[:,0],labels), x[:,0]
 
 
-# In[ ]:
-
-
-
-
-
-# In[7]:
-
 
 if __name__=="__main__":
     tor=[[1,2,3,4],[5,6,7,8]]
@@ -57,9 +43,6 @@ if __name__=="__main__":
     bow=BOW_model(8,3)
     bow.cuda()
     bow(tor,y)
-
-
-# In[ ]:
 
 
 
