@@ -6,5 +6,6 @@ I have also attached few scripts and notebooks used for preprocessing steps.
 
 The dataset consists of over 60M reviews given by over 1.5 users. The pre-processing steps and the selection of subset of reviews are also shown in the attached files.
 
-Test Accuracy for Naive Bayes Classifier: 86.37%
+Test Accuracy for Naive Bayes Classifier: <b>86.37%<b>
+
 Test Accuracy for Bag-of-Words Model    : 91.7%
