@@ -4,7 +4,7 @@ This repository contains the code for sentiment analysis performed for Yelp Revi
 
 I have also attached few scripts and notebooks used for preprocessing steps.
 
-The dataset consists of over 60M reviews given by over 1.5 users. The pre-processing steps and the selection of subset of reviews are also shown in the attached files.
+The dataset consists of over 6 million reviews given by over 1.5 million users. The pre-processing steps and the selection of subset of reviews are also shown in the attached files.
 
 Test Accuracy for Naive Bayes Classifier: <b>86.37%</b>
 
