@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
 
 import numpy as np
 import torch
@@ -11,9 +6,6 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.autograd import Variable
 import torch.distributed as dist
-
-
-# In[32]:
 
 
 class StateLSTM(nn.Module):
@@ -42,10 +34,6 @@ class StateLSTM(nn.Module):
         return self.a
     
 
-
-# In[58]:
-
-
 class LockedDropout(nn.Module):
     def __init__(self):
         super(LockedDropout,self).__init__()
@@ -62,9 +50,6 @@ class LockedDropout(nn.Module):
         mask=Variable(self.d, requires_grad=False)/(1-dropout)
             
         return mask*x
-
-
-# In[86]:
 
 
 class Sentiment(nn.Module):
@@ -109,10 +94,6 @@ class Sentiment(nn.Module):
             
         return self.loss(a[:,0],y), a[:,0]
             
-
-
-# In[105]:
-
 
 if __name__=="__main__":
     tor=Variable(torch.LongTensor([[1,2,3,4],[5,6,7,8]])).cuda()
