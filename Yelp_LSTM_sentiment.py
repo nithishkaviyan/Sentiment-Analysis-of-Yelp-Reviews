@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
 
 import numpy as np
 
@@ -21,43 +16,36 @@ import sys
 import io
 
 
-# In[ ]:
-
-
 vocab_size=10000
 
 ##Load train data
 x_train=[]
-with io.open('F:/Yelp Data/Processed Data/yelp_train.txt','r',encoding='utf-8') as f:
+with io.open('yelp_train.txt','r',encoding='utf-8') as f:
     for rev in f:
         review=np.asarray(rev.split(),dtype=np.int)
         review[review>vocab_size]=0
         x_train.append(review)
 
 y_train=[]
-with io.open('F:/Yelp Data/Processed Data/yelp_train_labels.txt','r',encoding='utf-8') as f:
+with io.open('yelp_train_labels.txt','r',encoding='utf-8') as f:
     for y in f:
         y_train.append(int(y.strip()))
 
 
-# In[ ]:
-
 
 ##Load test data
 x_test=[]
-with io.open('F:/Yelp Data/Processed Data/yelp_test.txt','r',encoding='utf-8') as f:
+with io.open('yelp_test.txt','r',encoding='utf-8') as f:
     for rev in f:
         review=np.asarray(rev.split(),dtype=np.int)
         review[review>vocab_size]=0
         x_test.append(review)
         
 y_test=[]
-with io.open('F:/Yelp Data/Processed Data/yelp_test_labels.txt','r',encoding='utf-8') as f:
+with io.open('yelp_test_labels.txt','r',encoding='utf-8') as f:
     for y in f:
         y_test.append(int(y.strip()))
 
-
-# In[ ]:
 
 
 vocab_size+=1
@@ -65,8 +53,6 @@ vocab_size+=1
 model=Sentiment(vocab_size,500)
 model.cuda()
 
-
-# In[ ]:
 
 
 ##Optimizer
