@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
 
 import numpy as np
 
@@ -21,9 +16,6 @@ import sys
 import io
 
 
-# In[85]:
-
-
 vocab_size=10000
 
 ##Load train data
@@ -40,9 +32,6 @@ with io.open('yelp_train_labels.txt','r',encoding='utf-8') as f:
         y_train.append(int(y.strip()))
 
 
-# In[84]:
-
-
 ##Load test data
 x_test=[]
 with io.open('yelp_test.txt','r',encoding='utf-8') as f:
@@ -57,16 +46,10 @@ with io.open('yelp_test_labels.txt','r',encoding='utf-8') as f:
         y_test.append(int(y.strip()))
 
 
-# In[70]:
-
-
 vocab_size+=1
 
 model=BOW_model(vocab_size,500)
 model.cuda()
-
-
-# In[ ]:
 
 
 ##Optimizer
@@ -157,7 +140,7 @@ for epoch in range(num_epochs):
     test_loss.append(np.mean(tes_eplos))
             
     
-    print("Epoch: "+str(epoch)+" Train Loss: %.4f" %(np.mean(epoch_loss))+          " Train Accuracy: %.4f" % epoch_acc+" Test Loss: %.4f" %np.mean(tes_eplos)+" Test Accuracy: "+str(tes_acc)          +" Epoch Time: "+str(time.time()-time1))
+    print("Epoch: "+str(epoch)+" Train Loss: %.4f" %(np.mean(epoch_loss))+          " Train Accuracy: %.4f" % (epoch_acc*100.0)+" Test Loss: %.4f" %np.mean(tes_eplos)+" Test Accuracy: "+str(tes_acc*100.0)          +" Epoch Time: "+str(time.time()-time1))
     
     
 
