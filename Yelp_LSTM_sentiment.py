@@ -119,7 +119,7 @@ for epoch in range(num_epochs):
     train_acc.append(epoch_acc*100.0)
     train_loss.append(np.mean(epoch_loss))
     
-    print("Epoch: "+str(epoch)+" Train Loss: %.4f" %(np.mean(epoch_loss))+          " Train Accuracy: %.4f" % epoch_acc+          " Epoch Time: "+str(time.time()-time1))
+    print("Epoch: "+str(epoch)+" Train Loss: %.4f" %(np.mean(epoch_loss))+          " Train Accuracy: %.4f" % (epoch_acc*100.0)+          " Epoch Time: "+str(time.time()-time1))
     
     if(epoch%3==0):
         model.eval()
@@ -168,7 +168,7 @@ for epoch in range(num_epochs):
         test_loss.append(np.mean(tes_eplos))
             
     
-        print("Test Loss: %.4f" %np.mean(tes_eplos)+" Test Accuracy: "+str(tes_acc))
+        print("Test Loss: %.4f" %np.mean(tes_eplos)+" Test Accuracy: "+str(tes_acc*100.0))
     
         
 
