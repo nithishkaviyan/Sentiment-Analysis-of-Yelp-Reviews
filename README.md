@@ -9,3 +9,5 @@ The dataset consists of over 6 million reviews given by over 1.5 million users. 
 Test Accuracy for Naive Bayes Classifier: <b>86.37%</b>
 
 Test Accuracy for Bag-of-Words Model    : <b>91.7%</b>
+
+Test Accuracy for LSTM Model    : <b>94.53%</b> (Sequence Length = 500)
