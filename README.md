@@ -10,6 +10,8 @@ Test Accuracy for Naive Bayes Classifier: <b>86.37%</b>
 
 Test Accuracy for Bag-of-Words Model    : <b>91.7%</b>
 
+Test Accuracy for Convolutional Neural Network Model : <b> 88.83% </b>
+
 Test Accuracy for LSTM Model    : <b>94.53%</b> (Test Sequence Length = 500)
 
 
