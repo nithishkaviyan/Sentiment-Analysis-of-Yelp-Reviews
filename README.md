@@ -14,4 +14,5 @@ Test Accuracy for LSTM Model    : <b>94.53%</b> (Test Sequence Length = 500)
 
 
 [1] https://arxiv.org/pdf/1408.5882.pdf
+
 [2] https://arxiv.org/abs/1606.01781
